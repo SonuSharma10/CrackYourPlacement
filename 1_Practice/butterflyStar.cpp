@@ -8,7 +8,7 @@ int main(){
     cin>>n;
     for (i = 1; i<=n/2;i++){
         for(j = 1; j<=i; j++){
-            cout<<" * ";
+            cout<<" * "; 
         }
         for(k = j; k <= abs(n-i); k++){
             cout<<"   ";
