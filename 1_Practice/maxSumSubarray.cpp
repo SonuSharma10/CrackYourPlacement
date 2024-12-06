@@ -41,11 +41,29 @@ int maxSumSubarray1(int *arr, int n)
     return sums;
 }
 
+// kadane's Algorithm with TC of O(n);
+int kadanesAlgorithm(int *arr, int n)
+{
+    int currSum = 0;
+    int maxSum = INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        currSum += arr[i];
+        cout << currSum << "\t";
+        maxSum = max(currSum, maxSum);
+        if (currSum < 0)
+        {
+            currSum = 0;
+        }
+    }
+    return maxSum;
+}
+
 int main()
 {
-    int arr[] = {1, -1, 1, -1, 1, -2, 1};
+    int arr[] = {2, -3, 5, 6, -11, 2};
     int n = sizeof(arr) / sizeof(int);
 
-    int max = maxSumSubarray1(arr, n);
-    cout << "Maximum sum of subarray is : " << max;
+    int max = kadanesAlgorithm(arr, n);
+    cout << "\n Maximum sum of subarray is : " << max << endl;
 }
