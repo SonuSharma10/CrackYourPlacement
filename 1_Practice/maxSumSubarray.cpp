@@ -61,7 +61,7 @@ int kadanesAlgorithm(int *arr, int n)
 
 int main()
 {
-    int arr[] = {2, -3, 5, 6, -11, 2};
+    int arr[] = {2, -3, 5, 6, -3, 2};
     int n = sizeof(arr) / sizeof(int);
 
     int max = kadanesAlgorithm(arr, n);
