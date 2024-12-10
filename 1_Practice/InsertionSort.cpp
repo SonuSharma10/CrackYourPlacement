@@ -24,12 +24,13 @@ int InsertionSort(int arr[], int n)
                 current = j;
             }
         }
+        print(arr, n);
     }
 }
 
 int main()
 {
-    int arr[] = {5, 4, 3, 2, 1};
+    int arr[] = {5, 4, 1, 3, 2};
     int n = sizeof(arr) / sizeof(int);
     InsertionSort(arr, n);
     print(arr, n);
