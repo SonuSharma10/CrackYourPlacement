@@ -33,7 +33,10 @@ int CountSort(int arr[], int n, int countSize)
 
 int main()
 {
+    // demo     int arr[] = {1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0};
+
     int arr[] = {3, 3, 4, 1, 2, 6, 5, 5};
+
     int n = sizeof(arr) / sizeof(int);
     int max = arr[0];
 
