@@ -29,7 +29,7 @@ int InsertionSort(int arr[], int n)
 
 int main()
 {
-    int arr[] = {5, 7, 9, 4, 2, 1, 0};
+    int arr[] = {5, 4, 3, 2, 1};
     int n = sizeof(arr) / sizeof(int);
     InsertionSort(arr, n);
     print(arr, n);
