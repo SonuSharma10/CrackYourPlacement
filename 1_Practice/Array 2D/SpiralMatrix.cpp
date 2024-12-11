@@ -10,6 +10,7 @@ void spiralOrder(int arr[][4], int row)
     int r = 0, c = -1, j = 0;
     n++;
     while (true)
+
     {
         n--;
         if (n == 0 || m == 0)
