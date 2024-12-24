@@ -22,6 +22,7 @@
 // 1 <= m, n <= 100
 // -104 <= matrix[i][j], target <= 104
 
+// This is using the concept of binary search and the time complexity is O(n*log(m))
 #include <bits/stdc++.h>
 using namespace std;
 
