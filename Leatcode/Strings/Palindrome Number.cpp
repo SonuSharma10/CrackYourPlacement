@@ -29,7 +29,7 @@ public:
     bool isPalindrome(int x)
     {
         vector<int> num2;
-        // without converting  into string
+        // without converting  into string i.e. without using to_string() just by using % and / operator
         if (x < 0)
             return 0;
         else
