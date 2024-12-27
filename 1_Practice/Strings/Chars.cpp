@@ -5,6 +5,15 @@ using namespace std;
 
 int main()
 {
+    string str1 = "Hello";
+    string str2("World");
+    string str3(str1);
+
+    cout << str1 + " " + str2 + "!!! " + str3;
+}
+
+int main_1()
+{
     int num = 1e2;
     string str2;
     char str3[num];
