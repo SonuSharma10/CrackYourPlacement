@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
 int main()
@@ -31,5 +32,9 @@ int main()
     reverse(str1.begin(), str1.end());
     cout << str1 << endl;
 
+    vector<int> v = {1, 2, 3, 4, 5};
+    v.push_back(6);
+    int p = v.pop_back();
+    cout << p << endl;
     return 0;
 }
