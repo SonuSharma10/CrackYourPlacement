@@ -42,9 +42,7 @@ int main()
     cout << bin << endl;
 
     //  counting no. of ones in binary representation
-
-    int bin = 1001010101010;
-    int ones = __builtin_popcount(bin);
+    int ones = __builtin_popcount(n);
     cout << ones << endl;
     return 0;
 }
