@@ -40,5 +40,11 @@ int main()
         bin = to_string(bit) + bin;
     }
     cout << bin << endl;
+
+    //  counting no. of ones in binary representation
+
+    int bin = 1001010101010;
+    int ones = __builtin_popcount(bin);
+    cout << ones << endl;
     return 0;
 }
