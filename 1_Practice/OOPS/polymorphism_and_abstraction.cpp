@@ -21,6 +21,7 @@
 #include <string>
 using namespace std;
 
+// Abstract class
 class Draw
 {
 public:
@@ -45,11 +46,29 @@ public:
     }
 };
 
+// polymorphism
+class Person
+{
+public:
+    void display()
+    {
+        cout << "Person" << endl;
+    }
+    void display(int age)
+    {
+        cout << "Person's age is " << age << endl;
+    }
+};
+
 int main()
 {
     Circle c;
     Rectangle r;
     c.draw();
     r.draw();
+    cout << endl;
+    Person p;
+    p.display();
+    p.display(20);
     return 0;
 }
