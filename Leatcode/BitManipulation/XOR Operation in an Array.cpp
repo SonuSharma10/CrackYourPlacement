@@ -35,6 +35,7 @@ public:
         {
             ans = ans ^ (start + 2 * i);
         }
+
         return ans;
     }
 };
