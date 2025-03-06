@@ -6,35 +6,40 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     
-    ll i,j,k,t,n,m,f,q;
+    ll i,j,k,t,n,m,f,q, c;
     cin >> t;
     while(t--){
+        cin >> n>>c;
         string s;
         cin>>s;
-        int pop= 0;
-        for(auto ch : s){
-            if(ch =='1') pop++;
+        
+        vector<int>freq(5,0);
+        for(auto &i : s){
+            int m = i -'A';
+            freq[m]++; 
         }
-        int zero = s.length()-pop;
-        if(abs(zero-pop)<=1){
-            bool order = true;
-            for(i=1; i<s.length(); i++){
-                if(s[i-1]==s[i]){
-                    order = false;
-                    break;
-                }
+
+         for(auto p : freq){
+            cout<<p<<"  ";
+        }
+        sort(freq.begin(), freq.end());
+        int ans = 0;
+        int sum = 0;
+        for(auto i : freq){
+            sum += i;
+            int cost = (sum*(sum+1)) / 2;
+            if(sum<c && cost<=c){
+                ans = max(ans,cost);
             }
-            if(order)cout<<0<<endl;
-            else cout<<1<<endl;
+            else{
+                ans+=c;
+            }
         }
-        else{
-            cout<<zero<<pop<<" "<<endl;
-            int diff = abs(zero - pop)-1;
-            cout<<diff<<endl;
-            if(diff>2) cout<<3<<endl;
-            else cout<<2<<endl;
-        }
+
+
+
        
+        cout<<ans<<endl;
     }
     
     return 0;
