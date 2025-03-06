@@ -23,3 +23,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
+class Solution
+{
+public:
+    long long coloredCells(int n)
+    {
+        ll color = 1;
+        // cout<<n<<" ";
+        while (--n)
+        {
+            // cout<<n<<" ";
+
+            color += 4 * n;
+        }
+        return color;
+    }
+};
